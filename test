@@ -1,0 +1,91 @@
+
+import java.util.Scanner;
+
+public class test7 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner scanner = new Scanner(System.in);
+
+		String yesorno;
+		String id="abc";
+		String idx="abc";
+		
+		id=idx;
+		
+		int haslo=0;
+		int haslox=0;
+		
+		haslo=haslox;
+		
+		System.out.print("czy masz juz konto ? y/n : ");
+		yesorno = scanner.next();
+		
+		
+		
+		
+		if (yesorno.equals("y"))
+		{
+			System.out.println("zaloguj sie");
+			System.out.print("podaj poprawne id : ");
+			id = scanner.next();
+			
+			if(id==id)
+			{
+				System.out.print("podaj poprawne haslo : ");
+				haslox = scanner.nextInt();
+				
+				if (haslo==haslox)
+				{
+					System.out.println("poprawne zalogowanie");
+				}
+				else
+				{
+					System.out.println("zle haslo;");
+					//jak zrobic powrot do "menu"
+				}
+				
+			}
+			else
+			{
+				System.out.println("zly id");
+				//jak zrobic powrot do "menu"
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		if (yesorno.equals("n"))
+		{
+			System.out.println("zakladanie konta");
+			System.out.print("podaj id : ");
+			id = scanner.next();
+			System.out.print("podaj haslo : ");
+			haslo = scanner.nextInt();
+			System.out.print("powtorz haslo : ");
+			haslox = scanner.nextInt();
+			
+			if(haslo==haslox)
+			{
+				System.out.println("zakonczenie zakladanie konta");
+				//jak zrobic powrot do "menu"
+			}
+			else
+			{
+				System.out.println("zle haslo podczas tworzeniu konta");
+				return;
+				//jak zrobic powrot do "menu"
+			}
+			
+			
+		}
+		
+		System.out.println("koniec petli yesorno");
+		
+	}		//public static void main     koniec
+}
