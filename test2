@@ -1,0 +1,187 @@
+import java.util.Scanner;
+
+public class test8 
+{
+
+	public static void main(String[] args) 
+	{
+		int pole1=0;
+		int pole2=0;
+		int pole3=0;
+		
+		int pole4=0;
+		int pole5=0;
+		int pole6=0;
+		
+		int pole7=0;
+		int pole8=0;
+		int pole9=0;
+		
+		int c=1;
+		for (c=1; c<=10;)
+		{
+			
+			Scanner scanner = new Scanner(System.in);
+			
+		int wybor;
+		int wybor2;
+		
+		System.out.print(pole1);
+		System.out.print(" "+pole2+" ");
+		System.out.println(pole3);
+		
+		System.out.print(pole4);
+		System.out.print(" "+pole5+" ");
+		System.out.println(pole6);
+		
+		System.out.print(pole7);
+		System.out.print(" "+pole8+" ");
+		System.out.println(pole9);
+		
+		System.out.print("wpisz pole 1-9 zeby wpisac 1[krzyzyk] : ");
+		wybor = scanner.nextInt();
+		
+		switch(wybor)
+		{
+		
+		case 1:
+		{
+			pole1=1;
+			break;
+		}
+		
+		case 2:
+		{
+			pole2=1;
+			break;
+		}
+		
+		case 3:
+		{
+			pole3=1;
+			break;
+		}
+		
+		case 4:
+		{
+			pole4=1;
+			break;
+		}
+		
+		case 5:
+		{
+			pole5=1;
+			break;
+		}
+		
+		case 6:
+		{
+			pole6=1;
+			break;
+		}
+		
+		case 7:
+		{
+			pole7=1;
+			break;
+		}
+		
+		case 8:
+		{
+			pole8=1;
+			break;
+		}
+		
+		case 9:
+		{
+			pole9=1;
+			break;
+		}
+		}
+		System.out.print(pole1);
+		System.out.print(" "+pole2+" ");
+		System.out.println(pole3);
+		
+		System.out.print(pole4);
+		System.out.print(" "+pole5+" ");
+		System.out.println(pole6);
+		
+		System.out.print(pole7);
+		System.out.print(" "+pole8+" ");
+		System.out.println(pole9);
+		
+		System.out.print("wpisz pole 1-9 zeby wpisac 2[kola] : ");
+		wybor2 = scanner.nextInt();
+		
+		switch(wybor2)
+		{
+		
+		case 1:
+		{
+			pole1=2;
+			break;
+		}
+		
+		case 2:
+		{
+			pole2=2;
+			break;
+		}
+		
+		case 3:
+		{
+			pole3=2;
+			break;
+		}
+		
+		case 4:
+		{
+			pole4=2;
+			break;
+		}
+		
+		case 5:
+		{
+			pole5=2;
+			break;
+		}
+		
+		case 6:
+		{
+			pole6=2;
+			break;
+		}
+		
+		case 7:
+		{
+			pole7=2;
+			break;
+		}
+		
+		case 8:
+		{
+			pole8=2;
+			break;
+		}
+		
+		case 9:
+		{
+			pole9=2;
+			break;
+		}
+		
+		// 1 krzyzyk wygrywa
+		//for(pole1=1 || pole2=1 || pole3=1 )
+		//for(pole1=1 || pole2=4 || pole3=7 )
+		//for(pole1=3 || pole2=6 || pole3=9 )
+		//for(pole1=7 || pole2=8 || pole3=9 )
+		//for(pole1=1 || pole2=5 || pole3=9 )
+		//for(pole1=3 || pole2=5 || pole3=7 )
+		
+		} // koniec switch
+		
+		
+		} // koniec petli for
+	
+	}
+}
