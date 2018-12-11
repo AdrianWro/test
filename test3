@@ -12,7 +12,7 @@ public class test10
 	String nazwisko=" ";
 	
 	int id=0;
-	int idx=1;
+	int idx=0;
 	int haslo=0;
 	int haslox=0;
 	
