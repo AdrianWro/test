@@ -1,53 +1,152 @@
 
 import java.util.Scanner;
 
-public class test9 
+public class test10
 {
-
-	String nick;
-	int wybor;
-	
 	Scanner scanner = new Scanner(System.in);
+	
+	int menuwybor;
+	int zalogowanowybor;
+	
+	String imie=" ";
+	String nazwisko=" ";
+	
+	int id=0;
+	int idx=1;
+	int haslo=0;
+	int haslox=0;
+	
 	
 	public static void main(String[] args) 
 	{
-	    test9 test = new test9();
+	    test10 test = new test10();
 	    test.startProcess();
 	}
 	
 	void startProcess() 
 	{
-	    showMenu();
+	    Menu();
 	}
-
-	void showMenu() 
+	
+	void Menu() 
 	{
-		System.out.println("WITAJ "+nick);
-		System.out.println("EDYCJA DANYCH");
-		System.out.println("[1] zmiana nicku");
-		System.out.println("[2] wyjscie");
+		System.out.println("MENU");
+		System.out.println("[1] ZALOGUJ SIE");
+		System.out.println("[2] STWORZ KONTO");
 		System.out.print("wybor : ");
-		wybor = scanner.nextInt();
+		menuwybor = scanner.nextInt();
 		
-		switch(wybor)
+		switch(menuwybor)
 		{
 		case 1:
 		{
-		    zmiananick();
+			zalogujsie();
 		}
 		case 2:
 		{
-			//exit
+			stworzeniekonta();
 		}
 		}
-		
 	}
 	
-	void zmiananick()
+	void zalogujsie() 
 	{
-		System.out.print("zmiana nicku : ");
-		nick = scanner.next();
-	    showMenu();
+		System.out.println("ZALOGUJ SIE");
+		System.out.print("ID : ");
+		idx = scanner.nextInt();
+		
+		if(id==idx)
+		{
+			System.out.print("HASLO : ");
+			haslox = scanner.nextInt();
+			
+			if(haslo==haslox)
+			{
+				zalogowano();
+			}
+			else
+			{
+				System.out.println("ZLE HASLO");
+			    Menu();
+			}
+		}
+		else
+		{
+			System.out.println("ZLE ID");
+		    Menu();
+		}
 	}
-
+	
+	void zalogowano() 
+	{
+		System.out.println("ZALOGOWANO Jako "+imie+" "+nazwisko);
+		System.out.println("[1] ZMIEN ID");
+		System.out.println("[2] ZMIEN HASLO");
+		System.out.println("[3] ZMIEN DANE");
+		System.out.println("[4] MENU");
+		System.out.print("wybor : ");
+		zalogowanowybor = scanner.nextInt();
+		
+		switch(zalogowanowybor)
+		{
+		case 1:
+		{
+			System.out.print("ZMIANA ID");
+			id = scanner.nextInt();
+		    Menu();
+		}
+		case 2:
+		{
+			System.out.print("ZMIANA HASLA");
+			haslo = scanner.nextInt();
+		    Menu();
+		}
+		case 3:
+		{
+			System.out.println("ZMIANA DANYCH");
+			System.out.println("PODAJ IMIE : ");
+			imie = scanner.next();
+			System.out.println("PODAJ NAZWISKO : ");
+			nazwisko = scanner.next();
+		    Menu();
+		}
+		case 4:
+		{
+			System.out.println("WYLOGOWANO");
+		    Menu();
+		}
+		}
+	}
+	
+	void stworzeniekonta() 
+	{
+		System.out.println("WITAJ W TWORZENIU KONTA");
+		System.out.print("Podaj Imie : ");
+		imie = scanner.next();
+		System.out.print("Podaj Nazwisko : ");
+		nazwisko = scanner.next();
+		System.out.print("Wpisz ID[liczby] : ");
+		id = scanner.nextInt();
+		System.out.print("Wpisz HASLO[liczby] : ");
+		haslo = scanner.nextInt();
+		System.out.print("Powtorz HASLO[liczby] : ");
+		haslox = scanner.nextInt();
+		
+		if(haslo==haslox)
+		{
+			
+			id=idx;
+			haslo=haslox;
+			
+			System.out.println("POMYSLNE UTWORZENIE KONTA");
+		    Menu();
+		}
+		else
+		{
+			System.out.println("BLAD PODCZAS TWORZENIU KONTA");
+			id=83542;
+			haslo=78123;
+		    Menu();
+		}
+	}
 }
