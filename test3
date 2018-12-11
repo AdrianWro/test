@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class test9 
+{
+
+	String nick;
+	int wybor;
+	
+	Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) 
+	{
+	    test9 test = new test9();
+	    test.startProcess();
+	}
+	
+	void startProcess() 
+	{
+	    showMenu();
+	}
+
+	void showMenu() 
+	{
+		System.out.println("WITAJ "+nick);
+		System.out.println("EDYCJA DANYCH");
+		System.out.println("[1] zmiana nicku");
+		System.out.println("[2] wyjscie");
+		System.out.print("wybor : ");
+		wybor = scanner.nextInt();
+		
+		switch(wybor)
+		{
+		case 1:
+		{
+		    zmianaimie();
+		}
+		case 2:
+		{
+			//exit
+		}
+		}
+		
+	}
+	
+	void zmianaimie()
+	{
+		System.out.print("zmiana nicku : ");
+		nick = scanner.next();
+	    showMenu();
+	}
+
+}
