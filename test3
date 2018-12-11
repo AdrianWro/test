@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class test9 
@@ -32,7 +33,7 @@ public class test9
 		{
 		case 1:
 		{
-		    zmianaimie();
+		    zmiananick();
 		}
 		case 2:
 		{
@@ -42,7 +43,7 @@ public class test9
 		
 	}
 	
-	void zmianaimie()
+	void zmiananick()
 	{
 		System.out.print("zmiana nicku : ");
 		nick = scanner.next();
