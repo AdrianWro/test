@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class test10
@@ -11,11 +10,10 @@ public class test10
 	String imie=" ";
 	String nazwisko=" ";
 	
-	int id=0;
-	int idx=0;
-	int haslo=0;
-	int haslox=0;
-	
+	int id=12345;
+	int idx;
+	int haslo=12345;
+	int haslox;
 	
 	public static void main(String[] args) 
 	{
@@ -91,7 +89,7 @@ public class test10
 		{
 		case 1:
 		{
-			System.out.print("ZMIANA ID");
+			System.out.print("ZMIANA ID : ");
 			id = scanner.nextInt();
 		    Menu();
 		}
@@ -128,16 +126,15 @@ public class test10
 		System.out.print("Wpisz ID[liczby] : ");
 		id = scanner.nextInt();
 		System.out.print("Wpisz HASLO[liczby] : ");
-		haslo = scanner.nextInt();
+		haslo = scanner.nextInt();	
 		System.out.print("Powtorz HASLO[liczby] : ");
 		haslox = scanner.nextInt();
 		
+		id=idx;
+		haslo=haslox;
+		
 		if(haslo==haslox)
 		{
-			
-			id=idx;
-			haslo=haslox;
-			
 			System.out.println("POMYSLNE UTWORZENIE KONTA");
 		    Menu();
 		}
