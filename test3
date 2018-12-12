@@ -15,6 +15,9 @@ public class test10
 	public int idx;
 	public int haslo=12345;
 	public int haslox;
+	public int stankonta=0;
+	public int stankontaminus=0;
+	public int stankontaplus=0;
 	
 	public static void main(String[] args) 
 	{
@@ -32,6 +35,7 @@ public class test10
 		System.out.println("MENU");
 		System.out.println("[1] ZALOGUJ SIE");
 		System.out.println("[2] STWORZ KONTO");
+		System.out.println("[3] WYJSCIE");
 		System.out.print("wybor : ");
 		menuwybor = scanner.nextInt();
 		
@@ -44,6 +48,14 @@ public class test10
 		case 2:
 		{
 			stworzeniekonta();
+		}
+		case 3:
+		{
+			System.exit(0);
+		}
+		default:
+		{
+			Menu();
 		}
 		}
 	}
@@ -82,7 +94,9 @@ public class test10
 		System.out.println("[1] ZMIEN ID");
 		System.out.println("[2] ZMIEN HASLO");
 		System.out.println("[3] ZMIEN DANE");
-		System.out.println("[4] MENU");
+		System.out.println("[4] WYPLAC");
+		System.out.println("[5] WPLATA");
+		System.out.println("[6] MENU");
 		System.out.print("wybor : ");
 		zalogowanowybor = scanner.nextInt();
 		
@@ -107,9 +121,44 @@ public class test10
 			imie = scanner.next();
 			System.out.println("PODAJ NAZWISKO : ");
 			nazwisko = scanner.next();
-		    Menu();
+			zalogowano();
 		}
 		case 4:
+		{
+			System.out.println("WYPLATA");
+			System.out.println("STAN KONTA "+stankonta);
+			System.out.print("ILE CHCESZ WYPLACIC : ");
+			stankontaminus = scanner.nextInt();
+			
+			if(stankonta>stankontaminus)
+			{
+				System.out.println(stankonta-stankontaminus);
+				stankonta = stankonta-stankontaminus;
+				stankontaminus=0;
+				System.out.println("STAN KONTA PO TRANZAKCJI : "+stankonta);
+			    Menu();
+			}
+			if(stankonta<stankontaminus)
+			{
+				stankontaminus=0;
+				System.out.println("STAN KONTA PO NIEUDANEJ TRANZAKCJI : "+stankonta);
+			    Menu();
+			}
+			
+		    Menu();
+		}
+		case 5:
+		{
+			System.out.println("WPLATA");
+			System.out.println("STAN KONTA "+stankonta);
+			System.out.print("ILE CHCESZ WPLACIC : ");
+			stankontaplus = scanner.nextInt();
+			stankonta = stankonta+stankontaplus;
+			stankontaminus=0;
+			System.out.println("STAN KONTA PO TRANZAKCJI : "+stankonta);
+			zalogowano();
+		}
+		case 6:
 		{
 			System.out.println("WYLOGOWANO");
 		    Menu();
