@@ -1,0 +1,354 @@
+package moje;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class test1a extends JFrame implements ActionListener
+{
+	JButton p1,p2,p3;
+	JButton p4,p5,p6;
+	JButton p7,p8,p9;
+	
+	//znak na button
+	String p1xo="XO",p2xo="XO",p3xo="XO";
+	String p4xo="XO",p5xo="XO",p6xo="XO";
+	String p7xo="XO",p8xo="XO",p9xo="XO";
+	
+	JLabel wyswietlgracz;
+	int gracz=1;
+	
+	public test1a()
+	{
+		setTitle("XO");
+		setLayout(null);
+		
+		p1 = new JButton(p1xo);
+		p1.setBounds(0,0,64,64);
+		add(p1);
+		p1.addActionListener(this);
+		
+		p2 = new JButton(p2xo);
+		p2.setBounds(64,0,64,64);
+		add(p2);
+		p2.addActionListener(this);
+		
+		p3 = new JButton(p3xo);
+		p3.setBounds(128,0,64,64);
+		add(p3);
+		p3.addActionListener(this);
+		
+		p4 = new JButton(p4xo);
+		p4.setBounds(0,64,64,64);
+		add(p4);
+		p4.addActionListener(this);
+		
+		p5 = new JButton(p5xo);
+		p5.setBounds(64,64,64,64);
+		add(p5);
+		p5.addActionListener(this);
+		
+		p6 = new JButton(p6xo);
+		p6.setBounds(128,64,64,64);
+		add(p6);
+		p6.addActionListener(this);
+		
+		p7 = new JButton(p7xo);
+		p7.setBounds(0,128,64,64);
+		add(p7);
+		p7.addActionListener(this);
+		
+		p8 = new JButton(p8xo);
+		p8.setBounds(64,128,64,64);
+		add(p8);
+		p8.addActionListener(this);
+		
+		p9 = new JButton(p9xo);
+		p9.setBounds(128,128,64,64);
+		add(p9);
+		p9.addActionListener(this);
+		
+		wyswietlgracz = new JLabel("Gracz : "+gracz);
+		wyswietlgracz.setBounds(72,125,128,150);
+		wyswietlgracz.setForeground(Color.red);
+		add(wyswietlgracz);
+		
+	}
+	public static void main(String[] args) 
+	{
+		test1a ramka = new test1a();
+		ramka.setBounds(512, 512, 198, 238);
+		ramka.setVisible(true);
+		ramka.setResizable(false);
+		ramka.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) 
+	{
+		Object test = e.getSource();
+		//ZMIANA XO NA X LUB O W BUTTON
+		//pole 1,2,3
+		if (test==p1)
+		{
+			if(gracz==1&&p1xo.equals("XO"))
+			{
+				p1xo="X1";
+				System.out.println(p1xo);
+				gracz=2;
+				wygrana();
+
+			}
+			if(gracz==2&&p1xo.equals("XO"))
+			{
+				p1xo="O1";
+				System.out.println(p1xo);
+				gracz=1;
+				wygrana();
+			}
+		}
+		if (test==p2)
+		{
+			if(gracz==1&&p2xo.equals("XO"))
+			{
+				p2xo="X2";
+				System.out.println(p2xo);
+				gracz=2;
+				wygrana();
+			}
+			if(gracz==2&&p2xo.equals("XO"))
+			{
+				p2xo="O2";
+				System.out.println(p2xo);
+				gracz=1;
+				wygrana();
+			}
+		}
+		if (test==p3)
+		{
+			if(gracz==1&&p3xo.equals("XO"))
+			{
+				p3xo="X3";
+				System.out.println(p3xo);
+				gracz=2;
+				wygrana();
+			}
+			if(gracz==2&&p3xo.equals("XO"))
+			{
+				p3xo="O3";
+				System.out.println(p3xo);
+				gracz=1;
+				wygrana();
+			}
+		}	
+		//pole 1,2,3 KONIEC	
+		
+		//pole 4,5,6
+		if (test==p4)
+		{
+			if(gracz==1&&p4xo.equals("XO"))
+			{
+				p4xo="X4";
+				System.out.println(p4xo);
+				gracz=2;
+				wygrana();
+
+			}
+			if(gracz==2&&p4xo.equals("XO"))
+			{
+				p4xo="O4";
+				System.out.println(p4xo);
+				gracz=1;
+				wygrana();
+			}
+		}
+		if (test==p5)
+		{
+			if(gracz==1&&p5xo.equals("XO"))
+			{
+				p5xo="X5";
+				System.out.println(p5xo);
+				gracz=2;
+				wygrana();
+			}
+			if(gracz==2&&p5xo.equals("XO"))
+			{
+				p5xo="O5";
+				System.out.println(p5xo);
+				gracz=1;
+				wygrana();
+			}
+		}
+		if (test==p6)
+		{
+			if(gracz==1&&p6xo.equals("XO"))
+			{
+				p6xo="X6";
+				System.out.println(p6xo);
+				gracz=2;
+				wygrana();
+			}
+			if(gracz==2&&p6xo.equals("XO"))
+			{
+				p6xo="O6";
+				System.out.println(p6xo);
+				gracz=1;
+				wygrana();
+			}
+		}	
+		//pole 4,5,6 KONIEC	
+		
+		//pole 7,8,9
+		if (test==p7)
+		{
+			if(gracz==1&&p7xo.equals("XO"))
+			{
+				p7xo="X7";
+				System.out.println(p7xo);
+				gracz=2;
+				wygrana();
+
+			}
+			if(gracz==2&&p7xo.equals("XO"))
+			{
+				p7xo="O7";
+				System.out.println(p7xo);
+				gracz=1;
+				wygrana();
+			}
+		}
+		if (test==p8)
+		{
+			if(gracz==1&&p8xo.equals("XO"))
+			{
+				p8xo="X8";
+				System.out.println(p8xo);
+				gracz=2;
+				wygrana();
+			}
+			if(gracz==2&&p8xo.equals("XO"))
+			{
+				p8xo="O8";
+				System.out.println(p8xo);
+				gracz=1;
+				wygrana();
+			}
+		}
+		if (test==p9)
+		{
+			if(gracz==1&&p9xo.equals("XO"))
+			{
+				p9xo="X9";
+				System.out.println(p9xo);
+				gracz=2;
+				wygrana();
+			}
+			if(gracz==2&&p9xo.equals("XO"))
+			{
+				p9xo="O9";
+				System.out.println(p9xo);
+				gracz=1;
+				wygrana();
+			}
+		}	
+		//pole 7,8,9 KONIEC	
+	}
+	private void wygrana() 
+	{
+		//poziomo
+		//WYGRANE 1,2,3
+		if(gracz==1&&p1xo.equals("X1")&&p2xo.equals("X2")&&p3xo.equals("X3"))
+		{
+			System.out.println("WYGRYWA GRACZ 1");
+			gracz=0;
+		}
+		if(gracz==2&&p1xo.equals("O1")&&p2xo.equals("O2")&&p3xo.equals("O3"))
+		{
+			System.out.println("WYGRYWA GRACZ 2");
+			gracz=0;
+		}	
+		//WYGRANE 4,5,6
+		if(gracz==1&&p4xo.equals("X4")&&p5xo.equals("X5")&&p6xo.equals("X6"))
+		{
+			System.out.println("WYGRYWA GRACZ 1");
+			gracz=0;
+		}
+		if(gracz==2&&p4xo.equals("O4")&&p5xo.equals("O5")&&p6xo.equals("O6"))
+		{
+			System.out.println("WYGRYWA GRACZ 2");
+			gracz=0;
+		}
+		//WYGRANE 7,8,9
+		if(gracz==1&&p7xo.equals("X7")&&p8xo.equals("X8")&&p9xo.equals("X9"))
+		{
+			System.out.println("WYGRYWA GRACZ 1");
+			gracz=0;
+		}
+		if(gracz==2&&p7xo.equals("O7")&&p8xo.equals("O8")&&p9xo.equals("O9"))
+		{
+			System.out.println("WYGRYWA GRACZ 2");
+			gracz=0;
+		}	
+		
+		//pionowo
+		//WYGRANE 1,4,7
+		if(gracz==1&&p1xo.equals("X1")&&p4xo.equals("X4")&&p7xo.equals("X7"))
+		{
+			System.out.println("WYGRYWA GRACZ 1");
+			gracz=0;
+		}
+		if(gracz==2&&p1xo.equals("O1")&&p4xo.equals("O4")&&p7xo.equals("O7"))
+		{
+			System.out.println("WYGRYWA GRACZ 2");
+			gracz=0;
+		}	
+		//WYGRANE 2,5,8
+		if(gracz==1&&p2xo.equals("X2")&&p5xo.equals("X5")&&p8xo.equals("X8"))
+		{
+			System.out.println("WYGRYWA GRACZ 1");
+			gracz=0;
+		}
+		if(gracz==2&&p2xo.equals("O2")&&p5xo.equals("O5")&&p8xo.equals("O8"))
+		{
+			System.out.println("WYGRYWA GRACZ 2");
+			gracz=0;
+		}	
+		//WYGRANE 3,6,9
+		if(gracz==1&&p3xo.equals("X3")&&p6xo.equals("X6")&&p9xo.equals("X9"))
+		{
+			System.out.println("WYGRYWA GRACZ 1");
+			gracz=0;
+		}
+		if(gracz==2&&p3xo.equals("O3")&&p6xo.equals("O6")&&p9xo.equals("O9"))
+		{
+			System.out.println("WYGRYWA GRACZ 2");
+			gracz=0;
+		}	
+		
+		//ukos 
+		//WYGRANE 1,5,9
+		if(gracz==1&&p1xo.equals("X1")&&p5xo.equals("X5")&&p9xo.equals("X9"))
+		{
+			System.out.println("WYGRYWA GRACZ 1");
+			gracz=0;
+		}
+		if(gracz==2&&p1xo.equals("O1")&&p5xo.equals("O5")&&p9xo.equals("O9"))
+		{
+			System.out.println("WYGRYWA GRACZ 2");
+			gracz=0;
+		}	
+		//WYGRANE 3,5,7
+		if(gracz==1&&p3xo.equals("X3")&&p5xo.equals("X5")&&p7xo.equals("X7"))
+		{
+			System.out.println("WYGRYWA GRACZ 1");
+			gracz=0;
+		}
+		if(gracz==2&&p3xo.equals("O3")&&p5xo.equals("O5")&&p7xo.equals("O7"))
+		{
+			System.out.println("WYGRYWA GRACZ 2");
+			gracz=0;
+		}	
+	}
+}
