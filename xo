@@ -86,8 +86,8 @@ public class test1a extends JFrame implements ActionListener
 		wyswietlgracz.setForeground(Color.red);
 		add(wyswietlgracz);
 		
-		wynik= new JLabel("X:"+gracz1XO+"     "+"O:"+gracz2XO);
-		wynik.setBounds(4,125,128,150);
+		wynik= new JLabel("X:"+gracz1XO+"    "+"O:"+gracz2XO);
+		wynik.setBounds(7,125,128,150);
 		add(wynik);
 		
 	}
@@ -420,16 +420,16 @@ public class test1a extends JFrame implements ActionListener
 		// 1,2,3
 		// 4,5,6
 		// 7,8,9
-		if(gracz==1&&p1xo.equals("XO")&&p2xo.equals("XO")&&p3xo.equals("XO")&&
-				p4xo.equals("XO")&&p5xo.equals("XO")&&p6xo.equals("XO")&&
-				p7xo.equals("XO")&&p8xo.equals("XO")&&p9xo.equals("XO"))
+		if(gracz==1&&!p1xo.equals("XO")&&!p2xo.equals("XO")&&!p3xo.equals("XO")&&
+				!p4xo.equals("XO")&&!p5xo.equals("XO")&&!p6xo.equals("XO")&&
+				!p7xo.equals("XO")&&!p8xo.equals("XO")&&!p9xo.equals("XO"))
 		{
 			System.out.println("REMIS");
 			gracz=0;
 		}
-		if(gracz==2&&p1xo.equals("XO")&&p2xo.equals("XO")&&p3xo.equals("XO")&&
-				p4xo.equals("XO")&&p5xo.equals("XO")&&p6xo.equals("XO")&&
-				p7xo.equals("XO")&&p8xo.equals("XO")&&p9xo.equals("XO"))
+		if(gracz==2&&!p1xo.equals("XO")&&!p2xo.equals("XO")&&!p3xo.equals("XO")&&
+				!p4xo.equals("XO")&&!p5xo.equals("XO")&&!p6xo.equals("XO")&&
+				!p7xo.equals("XO")&&!p8xo.equals("XO")&&!p9xo.equals("XO"))
 		{
 			System.out.println("REMIS");
 			gracz=0;
